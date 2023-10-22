@@ -4,14 +4,14 @@
         "description": "Black - Blue Ombre",
         "size": "standard",
         "price": "$55",
-        "category": ["Gaming", "Controller"]
+        "category": ["Gaming","Controller"]
     },
     {
         "name": "Lamp",
         "description": "Minimalistic Inductrial Black",
         "size": "15 in. tall, circular base",
         "price": "$20",
-        "category": ["Lamp", "Interior Decoration"]
+        "category": ["Lamp","Interior Decoration"]
     },
     {
         "name": "Desk Pad",
@@ -25,7 +25,7 @@
         "description": "Contigo Waterbottle",
         "size": "24 oz.",
         "price": "$20",
-        "category": ["Waterbottle", "Sports Equipment"]
+        "category": "Sports Equipment"
     },
     {
         "name": "Rubik's Cube",
@@ -39,35 +39,35 @@
         "description": "Blueberry",
         "size": "Youth size 6",
         "price": "$120",
-        "category": ["Shoes", "Nike"]
+        "category": "Nike shoes"
     },
     {
         "name": "Squishmallow",
         "description": "Carmelita The S'mores",
         "size": "15 in.",
         "price": "$17",
-        "category": ["Squishmallow", "Bedding"]
+        "category": "Squishmallow"
     },
     {
         "name": "Jujutsu Kaise Poster",
         "description": "Sakuna Poster",
         "size": "10 in. 20 in. tall",
         "price": "$15",
-        "category": ["Posters", "Decor"]
+        "category": "Decor"
     },
     {
         "name": "Backpack",
         "description": "Black",
         "size": "standard",
         "price": "$30",
-        "category": ["College Essentials", "Travel"]
+        "category": ["College Essentials","Travel"]
     },
     {
         "name": "Galaxy Book Pro",
         "description": "Silver",
         "size": "14 in.",
         "price": "$1,400",
-        "category": ["Laptops", "Tech"]
+        "category": "Laptops"
     },
     {
         "name": "Jacket",
@@ -77,7 +77,7 @@
         "category": "Jackets"
     },
     {
-        "name": "North Face Hooide",
+        "name": "North Face Hoodie",
         "description": "Green",
         "size": "Medium",
         "price": "$50",
