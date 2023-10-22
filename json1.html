@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON assignment</title>
+</head>
+<body>
+    <script type="text/javaScript">
+        let products = 
+        [
+            {
+                "name": "Xbox Controller",
+                "description": "Black - Blue Ombre",
+                "size": "standard",
+                "price": "$55",
+                "category": ["Gaming", "Controller"]
+            },
+            {
+                "name": "Lamp",
+                "description": "Minimalistic Inductrial Black",
+                "size": "15 in. tall, circular base",
+                "price": "$20",
+                "category": ["Lamp", "Interior Decoration"]
+            },
+            {
+                "name": "Desk Pad",
+                "description": "Blue Mountain, Gold Lining",
+                "size": "30 in. wide, 12 in. tall",
+                "price": "$15",
+                "category": "Desk Decor"
+            },
+            {
+                "name": "Waterbottle",
+                "description": "Contigo Waterbottle",
+                "size": "24 oz.",
+                "price": "$20",
+                "category": ["Waterbottle", "Sports Equipment"]
+            },
+            {
+                "name": "Rubik's Cube",
+                "description": "Standard Color",
+                "size": "2.5 in. cubed",
+                "price": "$5",
+                "category": "Puzzles"
+            },
+            {
+                "name": "Nike Low Dunks",
+                "description": "Blueberry",
+                "size": "Youth size 6",
+                "price": "$120",
+                "category": ["Shoes", "Nike"]
+            },
+            {
+                "name": "Squishmallow",
+                "description": "Carmelita The S'mores",
+                "size": "15 in.",
+                "price": "$17",
+                "category": ["Squishmallow", "Bedding"]
+            },
+            {
+                "name": "Jujutsu Kaise Poster",
+                "description": "Sakuna Poster",
+                "size": "10 in. 20 in. tall",
+                "price": "$15",
+                "category": ["Posters", "Decor"]
+            },
+            {
+                "name": "Backpack",
+                "description": "Black",
+                "size": "standard",
+                "price": "$30",
+                "category": ["College Essentials", "Travel"]
+            },
+            {
+                "name": "Galaxy Book Pro",
+                "description": "Silver",
+                "size": "14 in.",
+                "price": "$1,400",
+                "category": ["Laptops", "Tech"]
+            },
+            {
+                "name": "Jacket",
+                "description": "Colombia Vest Jacket",
+                "size": "Medium",
+                "price": "$55",
+                "category": "Jackets"
+            },
+            {
+                "name": "North Face Hooide",
+                "description": "Green",
+                "size": "Medium",
+                "price": "$50",
+                "category": "Jackets"
+            }
+        ]
+        
+        string_products = JSON.stringify(products);
+        document.write(string_products + "<br>")
+
+    </script>
+ 
+</body>
+</html>

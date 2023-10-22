@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON 2</title>
+
+        <style>
+            #json-display {
+                background-color: #d3c1c1;
+                padding: 10px;
+                border: 1 px solid #ddd;
+                border-radius: 5px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        </style>
+</head>
+<body>
+    <div id="json-display">
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $.get("https://yvette-m.github.io/cs20hw7p1/products.json", function(data) {
+
+                var formattedData = data.map(function(product) {
+                    return Object.keys(product).map(function(key) {
+                        return key + ": " + product[key];
+                    }).join('<br>');
+
+                }).join('<br><br>');
+
+                $("#json-display").html(formattedData);
+
+            });
+        });
+    </script>
+    
+</body>
+</html>

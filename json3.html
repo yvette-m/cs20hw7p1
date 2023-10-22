@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json 3</title>
+
+    <style>
+        #filteredProducts {
+            background-color: #d3c1c1;
+            padding: 10px;
+            border: 1 px solid #ddd;
+            border-radius: 5px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        
+        #filteredProducts p {
+            margin:  5px 0;
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Product Filter</h1>
+
+    <form id="filterform">
+        <label for="categorySelect">Select a Category:</label>
+        <select id="categorySelect">
+
+        </select>
+        <button type="button" id="filterButton">Filter</button>
+    </form>
+
+    <div id="filteredProducts">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var productsData;
+            // Load product data from products.json
+            $.get("https://yvette-m.github.io/cs20hw7p1/products.json", function(data) {
+                productsData = data;
+
+                // Populate the category dropdown with unique categories from the data
+                var categories = [];
+
+                $.each(data, function(index, product) {
+                    if (categories.indexOf(product.category) === -1) {
+                        categories.push(product.category);
+                        $('#categorySelect').append($('<option>', {
+                            value: product.category,
+                            text: product.category
+                        }));
+                    }
+                });
+
+                // Add a click event handler for the "Filter" button
+                $('#filterButton').on('click', function() {
+                    // Get the selected category from the dropdown
+                    var selectedCategories = $('#categorySelect').val();
+                    
+                    // Filter and display products that match the selected category
+                    var filteredProducts = productsData.filter(function(product) {
+                        return selectedCategories.includes(product.category);
+                    });
+                    
+                    // Display the product names in the div
+                    // var productInfo = filteredProducts.map(function(product) {
+                    //     var productDetails = Object.entries(product).map(function([key, value]) {
+                    //         return key + ": " + value;
+                    //     }).join('<br>');
+                    //     return '<p>' + productDetails + '</p>';
+                    // }).join('');
+                    
+                    // $('#filteredProducts').html(productInfo);
+                    // Display the product names in the div
+                    var productNames = filteredProducts.map(function(product) {
+                        return product.name;
+                    }).join('<br>');
+                    
+                    $('#filteredProducts').html(productNames);
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>
